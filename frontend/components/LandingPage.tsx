@@ -1,10 +1,14 @@
 // frontend/components/LandingPage.tsx
-
-import React, { FC, useRef } from 'react';
+import React, { FC, useRef, useEffect, useState } from 'react';
 import About from './About';  // Import the About component
 
 const LandingPage: FC = () => {
+  const [isClient, setIsClient] = useState(false);
   const aboutRef = useRef<HTMLDivElement>(null); // Create a ref to store the DOM element
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const handleContinue = () => {
     // Scroll down to the About section smoothly
@@ -16,8 +20,18 @@ const LandingPage: FC = () => {
 
   return (
     <>
-      <main style={{ height: '100vh' }} className="flex flex-col items-center justify-center bg-gray-200 dark:bg-gray-800 w-full">
+      {isClient && (
+        <StarfieldAnimation
+          style={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+          }}
+        />
+      )}
+      <main style={{ height: '100vh' }} className="relative flex flex-col items-center justify-center bg-gray-200 dark:bg-gray-800 w-full">
         {/* Landing Page Content */}
+        
         <div className="text-4xl font-semibold text-gray-800 dark:text-gray-100 mb-4 text-center">
           <div>Nice to meet you,</div> 
           <div> I'm <span className="text-indigo-600 dark:text-indigo-400">Cameron Sivo</span>, a full-stack developer.</div>
