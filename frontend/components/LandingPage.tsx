@@ -1,19 +1,14 @@
-import React, { FC, useRef, useEffect, useState } from "react";
+// frontend/components/LandingPage.tsx
+import React, { FC, useState, useEffect, useRef } from "react";
 import About from "./About"; // Import the About component
 import Skills from "./Skills"; // Import the Skills component
 
-const LandingPage: FC = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const aboutRef = useRef<HTMLDivElement>(null); // Create a ref to store the DOM element
+interface LandingPageProps {
+  isDarkMode: boolean;
+}
 
-  useEffect(() => {
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      setIsDarkMode(true);
-    }
-  }, []);
+const LandingPage: FC<LandingPageProps> = ({ isDarkMode }) => {
+  const aboutRef = useRef<HTMLDivElement>(null); // Create a ref to store the DOM element
 
   const handleContinue = () => {
     // Scroll down to the About section smoothly
@@ -23,7 +18,7 @@ const LandingPage: FC = () => {
     // Logic to show header can also be added here
   };
 
-  const bgColor = isDarkMode ? "black" : "lightblue"; // Darker blue for dark mode
+  const bgColor = isDarkMode ? "black" : "black"; // Background color based on dark mode
 
   return (
     <>
@@ -33,11 +28,9 @@ const LandingPage: FC = () => {
         className="flex flex-col items-center justify-center w-full"
       >
         {/* Landing Page Content */}
-
         <div className="text-4xl font-semibold text-gray-800 dark:text-gray-100 mb-4 text-center">
           <div>Nice to meet you,</div>
           <div>
-            {" "}
             I'm{" "}
             <span className="text-indigo-600 dark:text-indigo-400">
               Cameron Sivo
