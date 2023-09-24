@@ -2,21 +2,13 @@
 
 import React, { forwardRef } from "react";
 
-import {
-  SiPython,
-  SiJavascript,
-  SiHtml5,
-  SiCss3,
-  SiGit,
-  SiReact,
-  SiPostgresql,
-  SiFlask,
-  SiLinux,
-} from "react-icons/si";
-
 const About = forwardRef<HTMLDivElement>((props, ref) => {
   return (
-    <div ref={ref} className="about-container bg-white dark:bg-gray-800 p-8">
+    <div 
+      ref={ref} 
+      style={{ backgroundColor: "rgb(26, 27, 27)" }} 
+      className="text-center"
+    >
       <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-gray-100">
         About Me
       </h2>
@@ -33,21 +25,6 @@ const About = forwardRef<HTMLDivElement>((props, ref) => {
           My driving force is a strong work ethic and the relentless pursuit of
           improvement. Let's build something exceptional together.
         </p>
-      </div>
-      <div className="mt-8">
-        <h3 className="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
-          Skills & Technologies
-        </h3>
-        <div className="flex flex-wrap gap-4 text-3xl">
-          <SiPython />
-          <SiJavascript />
-          <SiHtml5 />
-          <SiCss3 />
-          <SiGit />
-          <SiReact />
-          <SiPostgresql />
-          <SiFlask />
-        </div>
       </div>
     </div>
   );
