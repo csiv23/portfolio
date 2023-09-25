@@ -32,7 +32,7 @@ const LandingPage: FC<LandingPageProps> = ({ isDarkMode, aboutRef }) => {
           <span className="text-indigo-600 dark:text-indigo-400">
             Cameron Sivo
           </span>
-          , a full-stack developer.
+          , a software engineer.
         </div>
       </div>
       <button
