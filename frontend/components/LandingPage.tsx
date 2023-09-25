@@ -1,19 +1,16 @@
 // frontend/components/LandingPage.tsx
-import React, { FC, useRef } from "react";
+import React, { FC, RefObject } from "react";
 
 interface LandingPageProps {
   isDarkMode: boolean;
+  aboutRef: RefObject<HTMLDivElement>;
 }
 
-const LandingPage: FC<LandingPageProps> = ({ isDarkMode }) => {
-  const aboutRef = useRef<HTMLDivElement>(null); // Create a ref to store the DOM element
-
+const LandingPage: FC<LandingPageProps> = ({ isDarkMode, aboutRef }) => {
   const handleContinue = () => {
-    // Scroll down to the About section smoothly
     if (aboutRef.current) {
       aboutRef.current.scrollIntoView({ behavior: "smooth" });
     }
-    // Logic to show header can also be added here
   };
 
   const bgColor = isDarkMode ? "black" : "black"; // Background color based on dark mode
