@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { FC } from 'react';
-import LandingPage from '../components/LandingPage';
+import Main from '../components/Main';
 
 const Home: FC = () => {
   return (
@@ -8,7 +8,7 @@ const Home: FC = () => {
       <Head>
         <title>Welcome | My Portfolio</title>
       </Head>
-      <LandingPage />
+      <Main />
     </>
   );
 };
