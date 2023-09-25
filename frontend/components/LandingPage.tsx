@@ -17,7 +17,11 @@ const LandingPage: FC<LandingPageProps> = ({ isDarkMode, aboutRef }) => {
 
   return (
     <main
-      style={{ height: "100vh", backgroundColor: bgColor }}
+      style={{
+        height: "100vh",
+        backgroundColor: bgColor,
+        position: "relative",
+      }} // Added position: "relative"
       className="flex flex-col items-center justify-center w-full"
     >
       {/* Landing Page Content */}
@@ -37,6 +41,23 @@ const LandingPage: FC<LandingPageProps> = ({ isDarkMode, aboutRef }) => {
       >
         Continue to site
       </button>
+      {/* Social Icons */}
+      <div className="absolute bottom-4 right-4 space-x-4">
+        <a
+          href="https://www.linkedin.com/in/cameron-sivo-68a721224/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fa fa-linkedin fa-2x text-white hover:text-gray-400"></i>
+        </a>
+        <a
+          href="https://github.com/csiv23"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fa fa-github fa-2x text-gray-800 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-200"></i>
+        </a>
+      </div>
     </main>
   );
 };
