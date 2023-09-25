@@ -1,7 +1,20 @@
 /* frontend/components/Experience.module.css */
 .jobBox {
-    width: 80%;
-    max-width: 800px;
     margin-top: 1rem;
+    max-width: 90%;
+    transition: all 0.3s ease;
+  }
+
+  .jobBox:hover {
+    background-color: rgb(40, 40, 40);
+    transform: scale(1.02);
+  }
+  
+  .techButton {
+    transition: all 0.3s ease;
+  }
+  
+  .techButton:hover {
+    filter: brightness(125%);
   }
   
