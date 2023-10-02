@@ -1,0 +1,33 @@
+/* LandingPage.css */
+.custom-button {
+  position: relative;
+  padding: 12px 24px;
+  border: 2px solid blue;
+  color: blue;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+  color: white;
+}
+
+.custom-button .arrow {
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-button:hover .arrow.right {
+  transform: rotate(90deg);
+}
+
+.arrow {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  transform: rotate(45deg);
+  margin-left: 5px;
+  margin-bottom: 2px;
+}

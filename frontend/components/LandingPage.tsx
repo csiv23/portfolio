@@ -1,5 +1,6 @@
 // frontend/components/LandingPage.tsx
 import React, { FC, RefObject } from "react";
+import './LandingPage.module.css'; // Import the CSS for hover animations
 
 interface LandingPageProps {
   isDarkMode: boolean;
@@ -21,10 +22,9 @@ const LandingPage: FC<LandingPageProps> = ({ isDarkMode, aboutRef }) => {
         height: "100vh",
         backgroundColor: bgColor,
         position: "relative",
-      }} // Added position: "relative"
+      }}
       className="flex flex-col items-center justify-center w-full"
     >
-      {/* Landing Page Content */}
       <div className="text-4xl font-semibold text-gray-800 dark:text-gray-100 mb-4 text-center">
         <div>Nice to meet you,</div>
         <div>
@@ -37,18 +37,17 @@ const LandingPage: FC<LandingPageProps> = ({ isDarkMode, aboutRef }) => {
       </div>
       <button
         onClick={handleContinue}
-        className="px-4 py-2 border-2 border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-300 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-300 dark:hover:text-white dark:focus:ring-blue-200"
+        className="custom-button"
       >
-        Continue to site
+        Continue to site <span className="arrow right"></span>
       </button>
-      {/* Social Icons */}
       <div className="absolute bottom-4 right-4 space-x-4">
         <a
           href="https://www.linkedin.com/in/cameron-sivo-68a721224/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fa fa-linkedin fa-2x text-white hover:text-gray-400"></i>
+          <i className="fa fa-linkedin fa-2x text-white hover:text-blue-500"></i>
         </a>
         <a
           href="https://github.com/csiv23"
