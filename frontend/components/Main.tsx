@@ -5,6 +5,7 @@ import About from "./About";
 import Skills from "./Skills";
 import Experience from "./Experience";
 import Projects from "./Projects";
+import Contact from "./Contact";
 
 const Main: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -28,6 +29,7 @@ const Main: React.FC = () => {
       <Skills />
       <Experience />
       <Projects />
+      <Contact />
     </>
   );
 };
