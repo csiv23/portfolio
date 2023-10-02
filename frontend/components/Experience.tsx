@@ -63,6 +63,14 @@ const Experience: FC = () => {
           </div>
         ))}
       </div>
+      <a 
+        href="/resume.pdf" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="text-2xl underline text-blue-500 hover:text-blue-700 transition-all duration-300 ease-in-out mb-8"
+      >
+        View Full Resume
+      </a>
     </div>
   );
 };
