@@ -1,20 +1,48 @@
 /* frontend/components/Experience.module.css */
 .jobBox {
-    margin-top: 1rem;
-    max-width: 90%;
-    transition: all 0.3s ease;
-  }
+  margin-top: 1rem;
+  max-width: 90%;
+  transition: all 0.3s ease;
+}
 
-  .jobBox:hover {
-    background-color: rgb(40, 40, 40);
-    transform: scale(1.02);
-  }
-  
-  .techButton {
-    transition: all 0.3s ease;
-  }
-  
-  .techButton:hover {
-    filter: brightness(125%);
-  }
-  
+.jobBox:hover {
+  background-color: rgb(40, 40, 40);
+  transform: scale(1.02);
+}
+
+.techButton {
+  transition: all 0.3s ease;
+}
+
+.techButton:hover {
+  filter: brightness(125%);
+}
+
+.resumeButton {
+  text-decoration: none;
+  color: #FFFFFF;  /* white font */
+  font-size: 1.5rem;
+  font-weight: 600;  /* similar to your title styling */
+  margin-top: 2vh;  /* vertical spacing */
+  margin-left: 1rem;  /* Aligns with dates */
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.resumeButton::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #00FF00;  /* Green */
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.resumeButton:hover::before {
+  visibility: visible;
+  width: 100%;  /* Now should fit just the text */
+}

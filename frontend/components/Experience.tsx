@@ -63,14 +63,18 @@ const Experience: FC = () => {
           </div>
         ))}
       </div>
-      <a 
-        href="/resume.pdf" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="text-2xl underline text-blue-500 hover:text-blue-700 transition-all duration-300 ease-in-out mb-8"
-      >
-        View Full Resume
-      </a>
+      <div className="grid grid-cols-4 w-full">
+        <div className="col-span-1 text-left">
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.resumeButton}
+          >
+            View Full Resume
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
