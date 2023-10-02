@@ -4,6 +4,7 @@ import LandingPage from "./LandingPage";
 import About from "./About";
 import Skills from "./Skills";
 import Experience from "./Experience";
+import Projects from "./Projects";
 
 const Main: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -26,6 +27,7 @@ const Main: React.FC = () => {
       </div>
       <Skills />
       <Experience />
+      <Projects />
     </>
   );
 };
