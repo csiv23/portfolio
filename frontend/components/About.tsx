@@ -4,9 +4,9 @@ import React, { forwardRef } from "react";
 
 const About = forwardRef<HTMLDivElement>((props, ref) => {
   return (
-    <div 
-      ref={ref} 
-      style={{ backgroundColor: "rgb(26, 27, 27)",  paddingBottom: "2vh" }} 
+    <div
+      ref={ref}
+      style={{ paddingBottom: "2vh" }}
       className="text-center"
     >
       <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-gray-100">

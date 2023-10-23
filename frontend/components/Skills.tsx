@@ -14,7 +14,7 @@ const Skills: FC = () => {
   ];
 
   return (
-    <div style={{ backgroundColor: "rgb(20 17 27)", paddingTop: "2vh", paddingBottom: "2vh" }} className="text-center p-6">
+    <div style={{ paddingTop: "2vh", paddingBottom: "2vh" }} className="text-center p-6">
       <h2 className="text-4xl font-semibold text-white mb-8">Skills & Technologies</h2>
       <div className="flex flex-wrap gap-4 justify-center">
         {skills.map((skill, index) => (

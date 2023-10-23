@@ -30,7 +30,7 @@ const Experience: FC = () => {
   ];
   return (
     <div
-      style={{ backgroundColor: "rgb(26, 27, 27)", paddingTop: "2vh" }}
+      style={{ paddingTop: "2vh" }}
       className="text-center w-full"
     >
       <h2 className="text-4xl font-semibold text-white mb-8">Experience</h2>
