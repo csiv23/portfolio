@@ -22,7 +22,8 @@ const Projects: FC = () => {
     },
     {
       name: "ZenGen - Customized Meditation App",
-      description: "ZenGen is a customized meditation app that offers a personalized guided experience. Utilizing Text-to-Speech technology, the app provides real-time guidance tailored to your selected preferences for length, focus, and method of meditation. The app is built using React on the frontend and Flask on the backend. It features dynamic content generation through ChatGPT, in-browser playback, and is designed for cross-platform compatibility.",
+      description:
+        "ZenGen is a customized meditation app that offers a personalized guided experience. Utilizing Text-to-Speech technology, the app provides real-time guidance tailored to your selected preferences for length, focus, and method of meditation. The app is built using React on the frontend and Flask on the backend. It features dynamic content generation through ChatGPT, in-browser playback, and is designed for cross-platform compatibility.",
       imageSrc: "/images/zengen.png",
       technologies: ["React", "Create React App", "Flask"],
       link: "https://github.com/yourusername/chat-app",
@@ -31,7 +32,10 @@ const Projects: FC = () => {
 
   return (
     <div
-      style={{ backgroundColor: "rgb(26, 27, 27)", paddingTop: "2vh" }}
+      style={{
+        paddingTop: "2vh",
+        paddingBottom: "2vh",
+      }}
       className="text-center w-full"
     >
       <h2 className="text-4xl font-semibold text-white mb-8">Projects</h2>
