@@ -13,6 +13,10 @@
   color: white;
 }
 
+.intro-line {
+  margin-bottom: 1em;  /* Adjust as needed */
+}
+
 .custom-button .arrow {
   transition: transform 0.3s ease-in-out;
 }
@@ -30,4 +34,10 @@
   transform: rotate(45deg);
   margin-left: 5px;
   margin-bottom: 2px;
+}
+
+
+.paragraph-width {
+  max-width: 700px;
+  width: 100%;
 }
