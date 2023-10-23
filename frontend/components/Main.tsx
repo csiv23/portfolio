@@ -6,30 +6,19 @@ import Skills from "./Skills";
 import Experience from "./Experience";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import styles from "./Main.module.css"; // Make sure the stylesheet is named Main.module.css
 
 const Main: React.FC = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const aboutRef = useRef<HTMLDivElement>(null); // Create a ref to store the DOM element
-
-  useEffect(() => {
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      setIsDarkMode(true);
-    }
-  }, []);
 
   return (
     <>
-      <LandingPage isDarkMode={isDarkMode} aboutRef={aboutRef}/>
-      <div ref={aboutRef}>
+        <LandingPage aboutRef={aboutRef} />
         <About ref={aboutRef} />
-      </div>
-      <Skills />
-      <Experience />
-      <Projects />
-      <Contact />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
     </>
   );
 };
