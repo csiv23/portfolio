@@ -3,7 +3,6 @@
     flex-direction: column; /* Make children stack vertically */
     justify-content: center;
     align-items: center;
-    padding: 2rem;
   }
   
   .contactForm {
