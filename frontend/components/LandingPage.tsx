@@ -1,18 +1,21 @@
 // frontend/components/LandingPage.tsx
-import React, { FC, RefObject } from "react";
+import React, { FC, RefObject, useContext } from "react";
+import { ThemeContext, ThemeUpdateContext } from "./ThemeContext";
 import styles from "./LandingPage.module.css";
 
 interface LandingPageProps {
   aboutRef: RefObject<HTMLDivElement>;
 }
 
-const LandingPage: FC<LandingPageProps> = ({aboutRef }) => {
+const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
+  const darkTheme = useContext(ThemeContext);
+  const toggleTheme = useContext(ThemeUpdateContext);
+
   const handleContinue = () => {
     if (aboutRef.current) {
       aboutRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
-
 
   return (
     <main
@@ -22,6 +25,19 @@ const LandingPage: FC<LandingPageProps> = ({aboutRef }) => {
       }}
       className="flex flex-col items-center justify-center w-full"
     >
+      {/* Theme Toggle */}
+      {/* Theme Toggle Button */}
+      <button
+        onClick={toggleTheme}
+        className={`${styles.themeToggleButton} ${
+          darkTheme
+            ? styles.themeToggleButtonDark
+            : styles.themeToggleButtonLight
+        }`}
+      >
+        Switch to {darkTheme ? "Light" : "Dark"} mode
+      </button>
+
       {/* Intro Lines */}
       <div
         style={{ fontSize: "48px", fontWeight: "bold" }}
@@ -40,7 +56,7 @@ const LandingPage: FC<LandingPageProps> = ({aboutRef }) => {
         <div>I'm a Software Engineer.</div>
       </div>
 
-      <button onClick={handleContinue} className="custom-button">
+      <button onClick={handleContinue} className={styles.customButton}>
         Continue to site <span className="arrow right"></span>
       </button>
       <div className="absolute bottom-4 right-4 space-x-4">
