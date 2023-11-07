@@ -19,16 +19,14 @@ const Main: React.FC = () => {
   }, [darkTheme]);
 
   return (
-    <ThemeProvider>
-      <div className = {darkTheme ? 'dark-theme' : 'light-theme'}>
-        <LandingPage aboutRef={aboutRef} />
-        <About ref={aboutRef} />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
-      </div>
-    </ThemeProvider>
+    <div className={darkTheme ? 'dark-theme' : 'light-theme'}>
+      <LandingPage aboutRef={aboutRef} />
+      <About ref={aboutRef} />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Contact />
+    </div>
   );
 };
 

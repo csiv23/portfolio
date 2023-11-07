@@ -1,6 +1,7 @@
 // frontend/components/LandingPage.tsx
 import React, { FC, RefObject, useContext } from "react";
 import { ThemeContext, ThemeUpdateContext } from "./ThemeContext";
+import useThemeStyles from "../hooks/useThemeStyles";
 import styles from "./LandingPage.module.css";
 
 interface LandingPageProps {
@@ -10,6 +11,7 @@ interface LandingPageProps {
 const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
   const darkTheme = useContext(ThemeContext);
   const toggleTheme = useContext(ThemeUpdateContext);
+  const { textClass, nameClass } = useThemeStyles();
 
   const handleContinue = () => {
     if (aboutRef.current) {
@@ -41,17 +43,19 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
       {/* Intro Lines */}
       <div
         style={{ fontSize: "48px", fontWeight: "bold" }}
-        className="text-4xl font-semibold text-gray-800 dark:text-gray-100 mb-4 text-center intro-line"
+        className={`text-4xl font-semibold mb-4 text-center intro-line ${textClass}`}
       >
         <div>
           Hey, I'm{" "}
-          <span className="text-indigo-600 dark:text-indigo-400">Cameron</span>.
-          👋
+          <span className={darkTheme ? styles.nameLight : styles.nameDark}>
+            Cameron
+          </span>
+          . 👋
         </div>
       </div>
       <div
         style={{ fontSize: "48px", fontWeight: "bold" }}
-        className="text-4xl font-semibold text-gray-800 dark:text-gray-100 mb-4 text-center intro-line"
+        className={`text-4xl font-semibold mb-4 text-center intro-line ${textClass}`}
       >
         <div>I'm a Software Engineer.</div>
       </div>

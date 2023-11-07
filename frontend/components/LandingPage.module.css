@@ -68,3 +68,19 @@
   background-color: #fff;
   color: #333;
 }
+
+.textDark {
+  color: #000; 
+}
+
+.textLight {
+  color: rgb(243 244 246);
+}
+
+.nameLight {
+  color: darkblue;
+}
+
+.nameDark {
+  color: rgb(129 140 248)
+}
