@@ -4,6 +4,7 @@ import { ThemeContext, ThemeUpdateContext } from "./ThemeContext";
 import useThemeStyles from "../hooks/useThemeStyles";
 import styles from "./LandingPage.module.css";
 
+
 interface LandingPageProps {
   aboutRef: RefObject<HTMLDivElement>;
 }
@@ -47,7 +48,7 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
       >
         <div>
           Hey, I'm{" "}
-          <span className={darkTheme ? styles.nameLight : styles.nameDark}>
+          <span className={darkTheme ? styles.nameDark : styles.nameLight}>
             Cameron
           </span>
           . 👋
@@ -60,7 +61,14 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
         <div>I'm a Software Engineer.</div>
       </div>
 
-      <button onClick={handleContinue} className={styles.customButton}>
+      <button 
+      onClick={handleContinue} 
+      className={`${styles.customButton} ${
+        darkTheme
+          ? styles.customButtonDark
+          : styles.customButtonLight
+      }`}
+      >
         Continue to site <span className="arrow right"></span>
       </button>
       <div className="absolute bottom-4 right-4 space-x-4">

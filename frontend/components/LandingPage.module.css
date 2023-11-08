@@ -1,15 +1,31 @@
+
 .customButton {
-  position: relative;
-  padding: 12px 24px;
-  border: 2px solid blue;
-  color: blue;
+  padding: 8px 16px;
+  margin: 0 0 20px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  overflow: hidden;
-  transition: color 0.3s ease-in-out;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
-.customButton:hover {
-  color: white;
+.customButtonDark {
+  background-color: #333;
+  color: #fff;
+}
+
+.customButtonLight {
+  background-color: #fff;
+  color: #333;
+}
+
+.customButtonDark:hover {
+  background-color: #444; /* Darker shade for hover state */
+}
+
+.customButtonLight:hover {
+  background-color: #eee; /* Lighter shade for hover state */
 }
 
 .intro-line {
@@ -70,17 +86,17 @@
 }
 
 .textDark {
-  color: #000; 
+  color: #444;
 }
 
 .textLight {
-  color: rgb(243 244 246);
+  color: #cdcdff;
 }
 
 .nameLight {
-  color: darkblue;
+  color: #2978b5;
 }
 
 .nameDark {
-  color: rgb(129 140 248)
+  color: #90a0d9;
 }
