@@ -3,6 +3,9 @@ import React, { FC, RefObject, useContext } from "react";
 import { ThemeContext, ThemeUpdateContext } from "./ThemeContext";
 import useThemeStyles from "../hooks/useThemeStyles";
 import styles from "./LandingPage.module.css";
+import MoonIcon from '@mui/icons-material/DarkModeOutlined'; // moon icon
+import SunIcon from '@mui/icons-material/LightModeOutlined'; // sun icon
+
 
 
 interface LandingPageProps {
@@ -38,7 +41,7 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
             : styles.themeToggleButtonLight
         }`}
       >
-        Switch to {darkTheme ? "Light" : "Dark"} mode
+        {darkTheme ? <SunIcon /> : <MoonIcon />} 
       </button>
 
       {/* Intro Lines */}
