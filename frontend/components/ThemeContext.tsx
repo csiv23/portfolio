@@ -10,7 +10,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   function toggleTheme() {
     setDarkTheme((prevDarkTheme) => !prevDarkTheme);
-    console.log(`Current theme is: ${darkTheme ? "Dark" : "Light"}`)
   }
 
   return (

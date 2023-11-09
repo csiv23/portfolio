@@ -6,20 +6,21 @@ import Skills from "./Skills";
 import Experience from "./Experience";
 import Projects from "./Projects";
 import Contact from "./Contact";
-import styles from "./Main.module.css"; // Make sure the stylesheet is named Main.module.css
+import Navbar from "./Navbar"; 
+import styles from "./Main.module.css"; 
 import { ThemeProvider, ThemeContext } from "./ThemeContext";
 
 const Main: React.FC = () => {
   const darkTheme = useContext(ThemeContext);
-  const aboutRef = useRef<HTMLDivElement>(null); // Create a ref to store the DOM element
+  const aboutRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     document.body.style.backgroundColor = darkTheme ? "#111" : "#fff";
-    console.log(`Current theme is: ${darkTheme ? "Dark" : "Light"}`);
   }, [darkTheme]);
 
   return (
     <div className={darkTheme ? 'dark-theme' : 'light-theme'}>
+      <Navbar /> 
       <LandingPage aboutRef={aboutRef} />
       <About ref={aboutRef} />
       <Skills />
