@@ -3,8 +3,7 @@ import React, { FC, RefObject, useContext } from "react";
 import { ThemeContext, ThemeUpdateContext } from "./ThemeContext";
 import useThemeStyles from "../hooks/useThemeStyles";
 import styles from "./LandingPage.module.css";
-import MoonIcon from "@mui/icons-material/DarkModeOutlined"; // moon icon
-import SunIcon from "@mui/icons-material/LightModeOutlined"; // sun icon
+
 
 interface LandingPageProps {
   aboutRef: RefObject<HTMLDivElement>;
@@ -12,7 +11,6 @@ interface LandingPageProps {
 
 const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
   const darkTheme = useContext(ThemeContext);
-  const toggleTheme = useContext(ThemeUpdateContext);
   const { textClass, nameClass } = useThemeStyles();
 
   const handleContinue = () => {
@@ -29,18 +27,6 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
       }}
       className="flex flex-col items-center justify-center w-full"
     >
-      {/* Theme Toggle */}
-      {/* Theme Toggle Button */}
-      <button
-        onClick={toggleTheme}
-        className={`${styles.themeToggleButton} ${
-          darkTheme
-            ? styles.themeToggleButtonDark
-            : styles.themeToggleButtonLight
-        }`}
-      >
-        {darkTheme ? <SunIcon /> : <MoonIcon />}
-      </button>
 
       {/* Intro Lines */}
       <div
