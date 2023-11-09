@@ -16,7 +16,7 @@
 }
 
 .customButtonLight {
-  background-color: #fff;
+  background-color: #eee;
   color: #333;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .customButtonLight:hover {
-  background-color: #eee; /* Lighter shade for hover state */
+  background-color: #ddd; /* Lighter shade for hover state */
 }
 
 .intro-line {
@@ -85,11 +85,11 @@
   color: #333;
 }
 
-.textDark {
+.textLight {
   color: #444;
 }
 
-.textLight {
+.textDark {
   color: #cdcdff;
 }
 
@@ -99,4 +99,12 @@
 
 .nameDark {
   color: #90a0d9;
+}
+
+.socialDark {
+  color: #cdcdff;
+}
+
+.socialLight {
+  color: #444;
 }

@@ -3,10 +3,8 @@ import React, { FC, RefObject, useContext } from "react";
 import { ThemeContext, ThemeUpdateContext } from "./ThemeContext";
 import useThemeStyles from "../hooks/useThemeStyles";
 import styles from "./LandingPage.module.css";
-import MoonIcon from '@mui/icons-material/DarkModeOutlined'; // moon icon
-import SunIcon from '@mui/icons-material/LightModeOutlined'; // sun icon
-
-
+import MoonIcon from "@mui/icons-material/DarkModeOutlined"; // moon icon
+import SunIcon from "@mui/icons-material/LightModeOutlined"; // sun icon
 
 interface LandingPageProps {
   aboutRef: RefObject<HTMLDivElement>;
@@ -41,7 +39,7 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
             : styles.themeToggleButtonLight
         }`}
       >
-        {darkTheme ? <SunIcon /> : <MoonIcon />} 
+        {darkTheme ? <SunIcon /> : <MoonIcon />}
       </button>
 
       {/* Intro Lines */}
@@ -64,13 +62,11 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
         <div>I'm a Software Engineer.</div>
       </div>
 
-      <button 
-      onClick={handleContinue} 
-      className={`${styles.customButton} ${
-        darkTheme
-          ? styles.customButtonDark
-          : styles.customButtonLight
-      }`}
+      <button
+        onClick={handleContinue}
+        className={`${styles.customButton} ${
+          darkTheme ? styles.customButtonDark : styles.customButtonLight
+        }`}
       >
         Continue to site <span className="arrow right"></span>
       </button>
@@ -80,14 +76,22 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fa fa-linkedin fa-2x text-white hover:text-blue-500"></i>
+          <i
+            className={`fa fa-linkedin fa-2x ${
+              darkTheme ? styles.socialDark : styles.socialLight
+            }`}
+          ></i>
         </a>
         <a
           href="https://github.com/csiv23"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fa fa-github fa-2x text-gray-800 hover:text-gray-700 dark:text-gray-100 dark:hover:text-blue-500"></i>
+          <i
+            className={`fa fa-github fa-2x ${
+              darkTheme ? styles.socialDark : styles.socialLight
+            }`}
+          ></i>
         </a>
       </div>
     </main>
