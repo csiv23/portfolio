@@ -10,8 +10,8 @@ interface ThemeStyles {
 const useThemeStyles = (): ThemeStyles => {
   const darkTheme = useContext(ThemeContext);
 
-  const textClass = darkTheme ? styles.textLight : styles.textDark;
-  const nameClass = darkTheme ? styles.nameLight : styles.nameDark;
+  const textClass = darkTheme ? styles.textDark : styles.textLight;
+  const nameClass = darkTheme ? styles.nameDark : styles.nameLight;
 
   return { textClass, nameClass };
 };
