@@ -6,7 +6,7 @@ const Home: FC = () => {
   return (
     <>
       <Head>
-        <title>Welcome | My Portfolio</title>
+        <title>Cameron Sivo</title>
       </Head>
       <Main />
     </>
