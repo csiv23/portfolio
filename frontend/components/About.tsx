@@ -6,6 +6,7 @@ const About = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <div
       ref={ref}
+      id="about"
       style={{ paddingBottom: "2vh" }}
       className="text-center"
     >

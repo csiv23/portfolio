@@ -32,6 +32,7 @@ const Projects: FC = () => {
 
   return (
     <div
+      id="projects"
       style={{
         paddingTop: "2vh",
         paddingBottom: "2vh",

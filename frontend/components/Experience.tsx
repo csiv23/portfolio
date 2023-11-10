@@ -30,6 +30,7 @@ const Experience: FC = () => {
   ];
   return (
     <div
+      id="experience"
       style={{ paddingTop: "2vh" }}
       className="text-center w-full"
     >

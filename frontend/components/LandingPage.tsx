@@ -4,7 +4,6 @@ import { ThemeContext, ThemeUpdateContext } from "./ThemeContext";
 import useThemeStyles from "../hooks/useThemeStyles";
 import styles from "./LandingPage.module.css";
 
-
 interface LandingPageProps {
   aboutRef: RefObject<HTMLDivElement>;
 }
@@ -21,13 +20,13 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
 
   return (
     <main
+      id="top"
       style={{
         height: "100vh",
         position: "relative",
       }}
       className="flex flex-col items-center justify-center w-full"
     >
-
       {/* Intro Lines */}
       <div
         style={{ fontSize: "48px", fontWeight: "bold" }}

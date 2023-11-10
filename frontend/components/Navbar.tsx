@@ -16,7 +16,7 @@ const Navbar: FC = () => {
       }`}
     >
       <div className={styles.navLinks}>
-        <a href="#welcome">Welcome</a>
+        <a href="#top">Cameron Sivo</a>
         <a href="#about">About Me</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>

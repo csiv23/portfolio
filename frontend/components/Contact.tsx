@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
-import styles from './Contact.module.css';
+import React, { useState } from "react";
+import styles from "./Contact.module.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   // Handles changes to form fields
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -20,11 +22,11 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Do your submission logic here (e.g., API call)
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
   return (
-    <div className={styles.contactContainer}>
+    <div id="contact" className={styles.contactContainer}>
       <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-gray-100">
         Contact
       </h2>
