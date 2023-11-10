@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import useThemeStyles from "../hooks/useThemeStyles";
 import styles from "./Experience.module.css";
 
 type Job = {
@@ -10,6 +11,7 @@ type Job = {
 };
 
 const Experience: FC = () => {
+  const { textClass } = useThemeStyles();
   const jobs: Job[] = [
     {
       company: "Retail Business Services",
@@ -34,7 +36,7 @@ const Experience: FC = () => {
       style={{ paddingTop: "2vh" }}
       className="text-center w-full"
     >
-      <h2 className="text-4xl font-semibold text-white mb-8">Experience</h2>
+      <h2 className={`text-4xl font-semibold mb-8 ${textClass}`}>Experience</h2>
       <div className="grid grid-cols-4 gap-4 w-full">
         {jobs.map((job, index) => (
           <div
@@ -42,14 +44,14 @@ const Experience: FC = () => {
             className={`col-span-4 grid grid-cols-4 w-full ${styles.jobBox}`}
           >
             {/* Duration */}
-            <div className="col-span-1 text-gray-400 text-lg">
+            <div className={`col-span-1 text-lg ${textClass}`}>
               <p>{job.duration}</p>
             </div>
             {/* Details */}
             <div className="col-span-3 text-left w-full">
-              <h3 className="text-2xl font-semibold text-white">{job.role}</h3>
-              <h4 className="text-xl text-white">{job.company}</h4>
-              <p className="text-base text-gray-400">{job.description}</p>
+              <h3 className={`text-2xl font-semibold ${textClass}`}>{job.role}</h3>
+              <h4 className={`text-xl ${textClass}`}>{job.company}</h4>
+              <p className={`text-base ${textClass}`}>{job.description}</p>
               <div className="mt-2 flex space-x-2">
                 {job.technologies.map((tech, techIndex) => (
                   <button
@@ -79,5 +81,6 @@ const Experience: FC = () => {
     </div>
   );
 };
+
 
 export default Experience;

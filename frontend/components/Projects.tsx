@@ -1,5 +1,5 @@
-// frontend/components/Projects.tsx
 import React, { FC } from "react";
+import useThemeStyles from "..//hooks/useThemeStyles";
 import styles from "./Projects.module.css";
 
 type Project = {
@@ -11,6 +11,7 @@ type Project = {
 };
 
 const Projects: FC = () => {
+  const { textClass } = useThemeStyles();
   const projects: Project[] = [
     {
       name: "Portfolio Website",
@@ -39,7 +40,7 @@ const Projects: FC = () => {
       }}
       className="text-center w-full"
     >
-      <h2 className="text-4xl font-semibold text-white mb-8">Projects</h2>
+      <h2 className={`text-4xl font-semibold mb-8 ${textClass}`}>Projects</h2>
       <div className="grid grid-cols-4 gap-4 w-full">
         {projects.map((project, index) => (
           <div
@@ -60,11 +61,11 @@ const Projects: FC = () => {
                 href={project.link || "#"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl font-semibold text-white"
+                className={`text-2xl font-semibold ${textClass}`}
               >
                 {project.name}
               </a>
-              <p className="text-base text-gray-500">{project.description}</p>
+              <p className={`text-base ${textClass}`}>{project.description}</p>
               <div className="mt-2 flex space-x-2">
                 {project.technologies.map((tech, techIndex) => (
                   <button
