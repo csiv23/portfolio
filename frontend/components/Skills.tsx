@@ -1,46 +1,71 @@
-import React, { FC } from "react";
-import {
-  SiPython,
-  SiJavascript,
-  SiHtml5,
-  SiCss3,
-  SiGit,
-  SiReact,
-} from "react-icons/si";
-import useThemeStyles from "../hooks/useThemeStyles";
-import styles from "./Skills.module.css";
+// frontend/components/Skills.tsx
+import React, { FC, useContext } from "react";
+import { ThemeContext } from "./ThemeContext";
+import useThemeStyles from "../hooks/useThemeStyles"; // Import the custom hook
 
 const Skills: FC = () => {
-  const { textClass } = useThemeStyles(); 
+  const { textClass } = useThemeStyles(); // Use the custom hook to get theme styles
+  const darkTheme = useContext(ThemeContext); // Get the current theme
 
   const skills = [
-    { name: "Python", icon: <SiPython /> },
-    { name: "JavaScript", icon: <SiJavascript /> },
-    { name: "HTML", icon: <SiHtml5 /> },
-    { name: "CSS", icon: <SiCss3 /> },
-    { name: "Git", icon: <SiGit /> },
-    { name: "React", icon: <SiReact /> },
+    "JavaScript",
+    "TypeScript",
+    "React.js",
+    "Node.js",
+    "Express",
+    "Next.js",
+    "HTML",
+    "CSS",
+    "Tailwind",
+    "MongoDB",
+    "PostgreSQL",
+    "MySQL",
+    "Python",
+    "Java",
+    "Git",
+    "GitHub",
+    "Azure",
+    "Heroku",
+    "Databricks",
+    "SQL",
+    "Postman",
+    "Jest",
+    "JUnit",
+    "pytest",
+    "pandas",
+    "seaborn",
+    "matplotlib",
+    "numpy",
+    "unittest",
   ];
 
   return (
     <div
       id="skills"
-      style={{ paddingTop: "2vh", paddingBottom: "2vh" }}
+      style={{
+        paddingTop: "2vh",
+        paddingBottom: "2vh",
+        margin: "0 auto",
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+      }}
       className="text-center p-6"
     >
-      <h2 className={`text-4xl font-semibold mb-8 ${textClass}`}>
-        Skills & Technologies
-      </h2>
+      <h2 className={`text-4xl font-semibold mb-8 ${textClass}`}>SKILLS</h2>
       <div className="flex flex-wrap gap-4 justify-center">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className={`m-2 p-2 border rounded bg-gray-700 ${textClass} flex flex-col items-center justify-center ${
-              styles["skill-box"] || ""
-            }`}
+            className={`m-2 p-2 border rounded ${textClass} flex items-center justify-center`}
+            style={{
+              backgroundColor: darkTheme ? "#2a2f4c" : "#fff",
+              boxShadow: "0 3px 3px 0 rgba(0,0,0,.15)",
+              border: darkTheme ? "none" : "0",
+              minWidth: "100px",
+            }}
           >
-            <div className="text-4xl">{skill.icon}</div>
-            <div className="text-base">{skill.name}</div>
+            <div className="text-base">{skill}</div>
           </div>
         ))}
       </div>
