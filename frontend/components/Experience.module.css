@@ -1,11 +1,15 @@
-/* frontend/components/Experience.module.css */
 .jobBox {
   margin-top: 1rem;
   max-width: 90%;
   transition: all 0.3s ease;
 }
 
-.jobBox:hover {
+.jobBoxLight:hover {
+  background-color: rgba(200, 200, 200, 0.2); 
+  transform: scale(1.02);
+}
+
+.jobBoxDark:hover {
   background-color: rgb(40, 40, 40);
   transform: scale(1.02);
 }
