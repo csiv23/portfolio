@@ -1,17 +1,27 @@
 import React, { forwardRef, useContext } from "react";
-import useThemeStyles from "../hooks/useThemeStyles"; // Import your custom hook
+import useThemeStyles from "../hooks/useThemeStyles";
 
 const About = forwardRef<HTMLDivElement>((props, ref) => {
-  const { textClass } = useThemeStyles(); // Get classes from your custom hook
+  const { textClass } = useThemeStyles();
 
   return (
     <div
       ref={ref}
       id="about"
-      style={{ paddingBottom: "2vh" }}
+      style={{
+        paddingBottom: "2vh",
+        width: "90%",
+        maxWidth: "1100px",
+        margin: "0 auto",
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+        alignItems: "center",
+        textAlign: "left",
+      }}
       className="text-center"
     >
-      <h2 className={`text-3xl font-bold mb-4 ${textClass}`}>About Me</h2>
+      <h2 className={`text-3xl font-semibold mb-8 ${textClass}`}>ABOUT ME</h2>
       <div className="flex items-center">
         <img
           src="/profile-picture.jpeg"
