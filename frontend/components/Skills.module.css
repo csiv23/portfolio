@@ -1,4 +1,19 @@
-.skill-box {
-  width: 100px;
-  height: 100px;
+.skillBox {
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.15);
+  min-width: 100px;
+}
+
+.skillBox:hover {
+  transform: translateY(-5px);
+}
+
+.skillBoxDark {
+  background-color: #2a2f4c;
+  border: none;
+}
+
+.skillBoxLight {
+  background-color: #fff;
+  border: 0px;
 }
