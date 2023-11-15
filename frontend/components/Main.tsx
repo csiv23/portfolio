@@ -15,7 +15,7 @@ const Main: React.FC = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    document.body.style.backgroundColor = darkTheme ? "#23283e" : "#fff";
+    document.body.style.backgroundColor = darkTheme ? "#23283e" : "#fcfcfc";
   }, [darkTheme]);
 
   return (
