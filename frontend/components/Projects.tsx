@@ -29,54 +29,87 @@ const Projects: FC = () => {
       technologies: ["React", "Create React App", "Flask"],
       link: "https://github.com/yourusername/chat-app",
     },
+    {
+      name: "MangaMatch Recommendation Engine",
+      description:
+        "Engineered a book recommendation platform aimed at helping readers discover series based on individual preferences. Implemented a recommendation algorithm utilizing one-hot encoding and cosine similarity for nuanced comparisons across book genres and themes. Designed an optimal batch processing mechanism, employing dynamic batch sizes for expedited computation and improved engine performance.",
+      imageSrc: "/images/zengen.png", // Placeholder image source
+      technologies: ["Express.js", "Node.js", "MongoDB", "React.js"],
+      link: "https://github.com/yourusername/mangamatch",
+    },
+    {
+      name: "Covey.Town Persistent Badge Database",
+      description:
+        "Developed additional features for Covey.Town, an open-source virtual meeting space for simultaneous video calls. Coordinated with 3 teammates to implement a persistent database to allow users to register and save a profile. Integrated a badge system to allow users to publicly display accomplishments to other players.",
+      imageSrc: "/images/zengen.png", // Placeholder image source
+      technologies: ["Typescript", "React.js", "PostgreSQL", "Postman"],
+      link: "https://github.com/yourusername/coveytown",
+    },
   ];
+
 
   return (
     <div
       id="projects"
       style={{
         paddingTop: "2vh",
-        paddingBottom: "2vh",
+        paddingBottom: "8vh",
+        margin: "0 auto",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        maxWidth: "1100px",
       }}
       className="text-center w-full"
     >
       <h2 className={`text-4xl font-semibold mb-8 ${textClass}`}>Projects</h2>
-      <div className="grid grid-cols-4 gap-4 w-full">
+      <div className="w-full" style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(2, 1fr)",
+        gridGap: "2rem"
+      }}>
         {projects.map((project, index) => (
-          <div
-            key={index}
-            className={`col-span-4 grid grid-cols-5 w-full ${styles.projectBox}`}
+          <div 
+            key={index} 
+            className={`${styles.project} ${textClass}`}
+            style={{ 
+              boxShadow: "hsla(240,5%,41%,0.2) 0px 7px 29px 0px",
+              maxWidth: "400px",
+              width: "100%",
+              margin: "0 auto",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              alignItems: "center",
+              transition: "transform 0.3s ease-in-out"
+            }}
+            onMouseOver={(e) => e.currentTarget.style.transform = "translateY(-10px)"}
+            onMouseOut={(e) => e.currentTarget.style.transform = "translateY(0)"}
           >
-            {/* Image */}
-            <div className="col-span-1">
-              <img
-                src={project.imageSrc}
-                alt={project.name}
-                className={`${styles.projectImage}`}
-              />
+            <img 
+              src={project.imageSrc} 
+              alt={project.name} 
+              style={{ 
+                width: "100%", 
+                borderRadius: "0.5rem", 
+                marginBottom: "1rem", 
+                objectFit: "cover" 
+              }} 
+            />
+            <h3 className="text-2xl font-semibold" style={{ marginBottom: "1rem", height: "3rem" }}>{project.name}</h3>
+            <p style={{ marginBottom: "1rem", height: "6rem", overflow: "hidden" }}>{project.description}</p>
+            <div className="flex justify-center space-x-2" style={{ marginBottom: "1rem" }}>
+              {project.technologies.map((tech, techIndex) => (
+                <span key={techIndex} style={{ textTransform: "uppercase", fontWeight: "bold" }}>
+                  {tech}
+                </span>
+              ))}
             </div>
-            {/* Details */}
-            <div className="col-span-4 text-left w-full">
-              <a
-                href={project.link || "#"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`text-2xl font-semibold ${textClass}`}
-              >
-                {project.name}
+            {project.link && (
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="fa fa-github fa-2x" style={{ marginBottom: "1rem" }}>
+                {/* Icon content (if any) */}
               </a>
-              <p className={`text-base ${textClass}`}>{project.description}</p>
-              <div className="mt-2 flex space-x-2">
-                {project.technologies.map((tech, techIndex) => (
-                  <button
-                    key={techIndex}
-                    className={`bg-blue-700 text-blue-300 rounded-full px-3 py-1 ${styles.techButton}`}
-                  >
-                    {tech}
-                  </button>
-                ))}
-              </div>
-            </div>
+            )}
           </div>
         ))}
       </div>
