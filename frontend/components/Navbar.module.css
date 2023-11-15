@@ -1,4 +1,3 @@
-/* Navbar.module.css */
 .navbar {
     display: flex;
     align-items: center;
@@ -51,24 +50,24 @@
   }
 
   .navbarDark {
-    background-color: #111; /* Dark theme background color */
-    color: #cdcdff;         /* Dark theme text color */
+    background-color: #23283e; 
+    color: #cdcdff;        
   }
   
   .navbarLight {
-    background-color: #fff; /* Light theme background color */
-    color: #444;            /* Light theme text color */
+    background-color: #fff; 
+    color: #444;          
   }
 
   .navbar a {
-    color: inherit; /* This ensures the links inherit the text color from the navbar */
-    text-decoration: none; /* Optional: Removes underline from links */
-    margin-right: 1rem; /* Adjust spacing between links */
-    transition: color 0.3s; /* Smooth transition for color change */
+    color: inherit; 
+    text-decoration: none; 
+    margin-right: 1rem;
+    transition: color 0.3s; 
   }
   
   .dark-theme {
-    --navbar-background-color: #111;
+    --navbar-background-color: #23283e;
     --text-color: #cdcdff;
     --highlight-color: #90a0d9;
     --button-background-color: #333;
