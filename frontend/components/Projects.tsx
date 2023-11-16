@@ -27,7 +27,7 @@ const Projects: FC = () => {
     {
       name: "ZenGen",
       description:
-        "ZenGen is a customized meditation app that offers a personalized guided experience. Utilizing Text-to-Speech technology, the app provides real-time guidance tailored to your selected preferences for length, focus, and method of meditation. The app is built using React on the frontend and Flask on the backend. It features dynamic content generation through ChatGPT, in-browser playback, and is designed for cross-platform compatibility.",
+        "A personalized meditation app leveraging Text-to-Speech for customized guidance. Built with React and Flask, it features dynamic ChatGPT content generation and cross-platform compatibility.",
       imageSrc: "/images/zengen.png",
       technologies: ["React", "Create React App", "Flask"],
       link: "https://github.com/csiv23/ZenGen",
@@ -35,7 +35,7 @@ const Projects: FC = () => {
     {
       name: "MangaMatch",
       description:
-        "Engineered a book recommendation platform aimed at helping readers discover series based on individual preferences. Implemented a recommendation algorithm utilizing one-hot encoding and cosine similarity for nuanced comparisons across book genres and themes. Designed an optimal batch processing mechanism, employing dynamic batch sizes for expedited computation and improved engine performance.",
+        "A book recommendation platform utilizing a one-hot encoding and cosine similarity algorithm for tailored suggestions across various genres and themes.",
       imageSrc: "/images/zengen.png", // Placeholder image source
       technologies: ["Express.js", "Node.js", "MongoDB", "React.js"],
       link: "https://github.com/csiv23/MangaMatch",
@@ -43,13 +43,12 @@ const Projects: FC = () => {
     {
       name: "Persistent Badge Database",
       description:
-        "Developed additional features for Covey.Town, an open-source virtual meeting space for simultaneous video calls. Coordinated with 3 teammates to implement a persistent database to allow users to register and save a profile. Integrated a badge system to allow users to publicly display accomplishments to other players.",
-      imageSrc: "/images/zengen.png", // Placeholder image source
+        "Enhanced an open-source virtual meeting space with a persistent database for user profiles and a badge system to showcase player achievements.",
+      imageSrc: "/images/coveytown.png", // Placeholder image source
       technologies: ["Typescript", "React.js", "PostgreSQL", "Postman"],
       link: "https://github.com/neu-cs4530/spring-23-team-513",
     },
   ];
-
 
   return (
     <div
@@ -66,17 +65,22 @@ const Projects: FC = () => {
       className="text-center w-full"
     >
       <h2 className={`text-4xl font-semibold mb-8 ${textClass}`}>Projects</h2>
-      <div className="w-full" style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(2, 1fr)",
-        gridGap: "2rem"
-      }}>
+      <div
+        className="w-full"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 1fr)",
+          gridGap: "2rem",
+        }}
+      >
         {projects.map((project, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className={`${styles.project} ${textClass}`}
-            style={{ 
-              boxShadow: darkTheme ? "rgba(0,0,0,0.16) 0px 10px 36px 0px,rgba(0,0,0,0.06) 0px 0px 0px 1px" : "hsla(240,5%,41%,0.2) 0px 7px 29px 0px",
+            style={{
+              boxShadow: darkTheme
+                ? "rgba(0,0,0,0.16) 0px 10px 36px 0px,rgba(0,0,0,0.06) 0px 0px 0px 1px"
+                : "hsla(240,5%,41%,0.2) 0px 7px 29px 0px",
               maxWidth: "400px",
               width: "100%",
               margin: "0 auto",
@@ -84,32 +88,61 @@ const Projects: FC = () => {
               flexDirection: "column",
               justifyContent: "space-between",
               alignItems: "center",
-              transition: "transform 0.3s ease-in-out"
+              transition: "transform 0.3s ease-in-out",
             }}
-            onMouseOver={(e) => e.currentTarget.style.transform = "translateY(-10px)"}
-            onMouseOut={(e) => e.currentTarget.style.transform = "translateY(0)"}
+            onMouseOver={(e) =>
+              (e.currentTarget.style.transform = "translateY(-10px)")
+            }
+            onMouseOut={(e) =>
+              (e.currentTarget.style.transform = "translateY(0)")
+            }
           >
-            <img 
-              src={project.imageSrc} 
-              alt={project.name} 
-              style={{ 
-                width: "100%", 
-                borderRadius: "0.5rem", 
-                marginBottom: "1rem", 
-                objectFit: "cover" 
-              }} 
+            <img
+              src={project.imageSrc}
+              alt={project.name}
+              style={{
+                width: "100%",
+                borderRadius: "0.5rem",
+                marginBottom: "1rem",
+                objectFit: "cover",
+              }}
             />
-            <h3 className="text-2xl font-semibold" style={{ marginBottom: "1rem", height: "3rem" }}>{project.name}</h3>
-            <p style={{ marginBottom: "1rem", height: "6rem", overflow: "hidden" }}>{project.description}</p>
-            <div className="flex justify-center space-x-2" style={{ marginBottom: "1rem" }}>
+            <h3
+              className="text-2xl font-semibold"
+              style={{ marginBottom: "1rem", height: "3rem" }}
+            >
+              {project.name}
+            </h3>
+            <p
+              style={{
+                marginBottom: "1rem",
+                height: "6rem",
+                overflow: "hidden",
+              }}
+            >
+              {project.description}
+            </p>
+            <div
+              className="flex justify-center space-x-2"
+              style={{ marginBottom: "1rem" }}
+            >
               {project.technologies.map((tech, techIndex) => (
-                <span key={techIndex} style={{ textTransform: "uppercase", fontWeight: "bold" }}>
+                <span
+                  key={techIndex}
+                  style={{ textTransform: "uppercase", fontWeight: "bold" }}
+                >
                   {tech}
                 </span>
               ))}
             </div>
             {project.link && (
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className="fa fa-github fa-2x" style={{ marginBottom: "1rem" }}>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fa fa-github fa-2x"
+                style={{ marginBottom: "1rem" }}
+              >
                 {/* Icon content (if any) */}
               </a>
             )}
