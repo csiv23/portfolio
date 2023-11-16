@@ -22,31 +22,31 @@ const Projects: FC = () => {
         "My portfolio website built using Next.js. This portfolio serves as a comprehensive showcase of my skills in web development. It features a dynamic UI, responsive design, and is highly optimized for performance.",
       imageSrc: "/images/zengen.png",
       technologies: ["Next.js", "Tailwind"],
-      link: "https://github.com/yourusername/portfolio",
+      link: "https://github.com/csiv23/portfolio",
     },
     {
-      name: "ZenGen - Customized Meditation App",
+      name: "ZenGen",
       description:
         "ZenGen is a customized meditation app that offers a personalized guided experience. Utilizing Text-to-Speech technology, the app provides real-time guidance tailored to your selected preferences for length, focus, and method of meditation. The app is built using React on the frontend and Flask on the backend. It features dynamic content generation through ChatGPT, in-browser playback, and is designed for cross-platform compatibility.",
       imageSrc: "/images/zengen.png",
       technologies: ["React", "Create React App", "Flask"],
-      link: "https://github.com/yourusername/chat-app",
+      link: "https://github.com/csiv23/ZenGen",
     },
     {
-      name: "MangaMatch Recommendation Engine",
+      name: "MangaMatch",
       description:
         "Engineered a book recommendation platform aimed at helping readers discover series based on individual preferences. Implemented a recommendation algorithm utilizing one-hot encoding and cosine similarity for nuanced comparisons across book genres and themes. Designed an optimal batch processing mechanism, employing dynamic batch sizes for expedited computation and improved engine performance.",
       imageSrc: "/images/zengen.png", // Placeholder image source
       technologies: ["Express.js", "Node.js", "MongoDB", "React.js"],
-      link: "https://github.com/yourusername/mangamatch",
+      link: "https://github.com/csiv23/MangaMatch",
     },
     {
-      name: "Covey.Town Persistent Badge Database",
+      name: "Persistent Badge Database",
       description:
         "Developed additional features for Covey.Town, an open-source virtual meeting space for simultaneous video calls. Coordinated with 3 teammates to implement a persistent database to allow users to register and save a profile. Integrated a badge system to allow users to publicly display accomplishments to other players.",
       imageSrc: "/images/zengen.png", // Placeholder image source
       technologies: ["Typescript", "React.js", "PostgreSQL", "Postman"],
-      link: "https://github.com/yourusername/coveytown",
+      link: "https://github.com/neu-cs4530/spring-23-team-513",
     },
   ];
 
