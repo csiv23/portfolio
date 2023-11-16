@@ -11,10 +11,8 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
   const darkTheme = useContext(ThemeContext);
   const { textClass, nameClass } = useThemeStyles();
 
-  const handleContinue = () => {
-    if (aboutRef.current) {
-      aboutRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleViewResume = () => {
+    window.location.href = '/resume.pdf'; // Redirect to the resume PDF
   };
 
   return (
@@ -63,14 +61,16 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
             exceptional together.
           </p>
         </div>
-        <button
-          onClick={handleContinue}
-          className={`${styles.customButton} ${
-            darkTheme ? styles.customButtonDark : styles.customButtonLight
-          }`}
-        >
-          Continue to site <span className="arrow right"></span>
-        </button>
+        <a
+        href="/resume.pdf" // Link to your resume PDF
+        target="_blank" // Opens in a new tab
+        rel="noopener noreferrer"
+        className={`${styles.customButton} ${
+          darkTheme ? styles.customButtonDark : styles.customButtonLight
+        }`}
+      >
+        View Resume <span className="arrow right"></span>
+      </a>
       </div>
 
       <div className="absolute bottom-4 right-4 space-x-4">
