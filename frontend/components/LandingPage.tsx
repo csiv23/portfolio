@@ -12,7 +12,7 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
   const { textClass, nameClass } = useThemeStyles();
 
   const handleViewResume = () => {
-    window.location.href = '/resume.pdf'; // Redirect to the resume PDF
+    window.location.href = "/resume.pdf"; // Redirect to the resume PDF
   };
 
   return (
@@ -62,40 +62,53 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
           </p>
         </div>
         <a
-        href="/resume.pdf" // Link to your resume PDF
-        target="_blank" // Opens in a new tab
-        rel="noopener noreferrer"
-        className={`${styles.customButton} ${
-          darkTheme ? styles.customButtonDark : styles.customButtonLight
-        }`}
-      >
-        View Resume <span className="arrow right"></span>
-      </a>
-      </div>
-
-      <div className="absolute bottom-4 right-4 space-x-4">
-        <a
-          href="https://www.linkedin.com/in/cameron-sivo-68a721224/"
+          href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
+          className={`${styles.customButton} ${
+            darkTheme ? styles.customButtonDark : styles.customButtonLight
+          }`}
         >
-          <i
+          View Resume <span className="arrow right"></span>
+        </a>
+
+        {/* Social Links with hover effect */}
+        <div className="mt-4 space-x-4">
+          <a
+            href="https://www.linkedin.com/in/cameron-sivo-68a721224/"
+            target="_blank"
+            rel="noopener noreferrer"
             className={`fa fa-linkedin fa-2x ${
               darkTheme ? styles.socialDark : styles.socialLight
             }`}
-          ></i>
-        </a>
-        <a
-          href="https://github.com/csiv23"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i
+            style={{
+              transition: "transform 0.2s ease-in-out",
+            }}
+            onMouseOver={(e) =>
+              (e.currentTarget.style.transform = "translateY(-5px)")
+            }
+            onMouseOut={(e) =>
+              (e.currentTarget.style.transform = "translateY(0)")
+            }
+          ></a>
+          <a
+            href="https://github.com/csiv23"
+            target="_blank"
+            rel="noopener noreferrer"
             className={`fa fa-github fa-2x ${
               darkTheme ? styles.socialDark : styles.socialLight
             }`}
-          ></i>
-        </a>
+            style={{
+              transition: "transform 0.2s ease-in-out",
+            }}
+            onMouseOver={(e) =>
+              (e.currentTarget.style.transform = "translateY(-5px)")
+            }
+            onMouseOut={(e) =>
+              (e.currentTarget.style.transform = "translateY(0)")
+            }
+          ></a>
+        </div>
       </div>
     </main>
   );
