@@ -1,6 +1,7 @@
-import React, { FC } from "react";
+import React, { FC, useContext } from "react";
 import useThemeStyles from "..//hooks/useThemeStyles";
 import styles from "./Projects.module.css";
+import { ThemeContext } from "./ThemeContext";
 
 type Project = {
   name: string;
@@ -12,6 +13,8 @@ type Project = {
 
 const Projects: FC = () => {
   const { textClass } = useThemeStyles();
+  const darkTheme = useContext(ThemeContext);
+
   const projects: Project[] = [
     {
       name: "Portfolio Website",
@@ -73,7 +76,7 @@ const Projects: FC = () => {
             key={index} 
             className={`${styles.project} ${textClass}`}
             style={{ 
-              boxShadow: "hsla(240,5%,41%,0.2) 0px 7px 29px 0px",
+              boxShadow: darkTheme ? "rgba(0,0,0,0.16) 0px 10px 36px 0px,rgba(0,0,0,0.06) 0px 0px 0px 1px" : "hsla(240,5%,41%,0.2) 0px 7px 29px 0px",
               maxWidth: "400px",
               width: "100%",
               margin: "0 auto",
