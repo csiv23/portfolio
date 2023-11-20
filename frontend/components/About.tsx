@@ -28,7 +28,7 @@ const About = forwardRef<HTMLDivElement>((props, ref) => {
           alt="Profile"
           className="w-32 h-32 rounded-full mr-8"
         />
-        <p className={`text-lg ${textClass}`}>
+        <div className={`text-lg ${textClass}`}>
           <p>
             My initial interest in software development began in high school
             when I became the lead programmer of my robotics team after being
@@ -58,7 +58,7 @@ const About = forwardRef<HTMLDivElement>((props, ref) => {
             to learn and grow, and I am always looking for new opportunities to
             challenge myself.
           </p>
-        </p>
+        </div>
       </div>
     </div>
   );
