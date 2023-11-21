@@ -40,6 +40,7 @@ const About = forwardRef<HTMLDivElement>((props, ref) => {
             Computer Science Mentorship Organization (CoSMO), where I guide
             younger students towards achieving their goals and successes.
           </p>
+          <br></br>
           <p>
             Outside of my technical pursuits, I am deeply involved in music,
             leading several bands in Boston. I enjoy expressing myself through
@@ -50,6 +51,7 @@ const About = forwardRef<HTMLDivElement>((props, ref) => {
             experimenting with ergonomic keyboards, and staying up to date on
             the latest advancements in e-ink technology.
           </p>
+          <br></br>
           <p>
             I firmly believe in the importance of a strong work ethic and
             consistency. These principles are central to my approach to life,
