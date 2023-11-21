@@ -1,4 +1,4 @@
-import React, { FC, useContext } from "react";
+import React, { FC, useContext, useState } from "react";
 import { ThemeContext, ThemeUpdateContext } from "./ThemeContext";
 import MoonIcon from "@mui/icons-material/DarkModeOutlined";
 import SunIcon from "@mui/icons-material/LightModeOutlined";
@@ -7,19 +7,23 @@ import styles from "./Navbar.module.css";
 const Navbar: FC = () => {
   const darkTheme = useContext(ThemeContext);
   const toggleTheme = useContext(ThemeUpdateContext);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
-  const scrollToSection = (sectionId: string, offset: number) => {
-    return (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-      event.preventDefault();
+  const scrollToSection = (sectionId: string) => {
+    return () => {
       const section = document.getElementById(sectionId);
       if (section) {
-        const offsetTop = section.offsetTop + offset; // Use the offset here
         window.scrollTo({
-          top: offsetTop,
+          top: section.offsetTop,
           behavior: "smooth",
         });
+        setIsNavOpen(false); // Close the menu after clicking a link
       }
     };
+  };
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
   };
 
   return (
@@ -28,21 +32,35 @@ const Navbar: FC = () => {
         darkTheme ? styles.navbarDark : styles.navbarLight
       }`}
     >
-      <div className={styles.navLinks}>
-        <a href="#top"  onClick={scrollToSection("top", -100)}>Cameron Sivo</a>
-        <a href="#about" onClick={scrollToSection("about", 400)}>
+      <button className={styles.navbarToggle} onClick={toggleNav}>
+        {isNavOpen ? "×" : "☰"}
+      </button>
+      <div
+        className={`${styles.navLinks} ${isNavOpen ? styles.navOpen : ""} ${
+          darkTheme ? styles.navOpenDark : styles.navOpenLight
+        }`}
+      >
+        <a
+          className={darkTheme ? styles.nameDark : styles.nameLight}
+          href="#top"
+          onClick={scrollToSection("top")}
+        >
+          Cameron Sivo
+        </a>
+
+        <a href="#about" onClick={scrollToSection("about")}>
           About Me
         </a>
-        <a href="#skills" onClick={scrollToSection("skills", -55)}>
+        <a href="#skills" onClick={scrollToSection("skills")}>
           Skills
         </a>
-        <a href="#experience" onClick={scrollToSection("experience", -55)}>
+        <a href="#experience" onClick={scrollToSection("experience")}>
           Experience
         </a>
-        <a href="#projects" onClick={scrollToSection("projects", -55)}>
+        <a href="#projects" onClick={scrollToSection("projects")}>
           Projects
         </a>
-        <a href="#contact" onClick={scrollToSection("contact", -55)}>
+        <a href="#contact" onClick={scrollToSection("contact")}>
           Contact
         </a>
       </div>
