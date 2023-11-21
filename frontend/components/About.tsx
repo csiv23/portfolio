@@ -23,11 +23,7 @@ const About = forwardRef<HTMLDivElement>((props, ref) => {
     >
       <h2 className={`text-3xl font-semibold mb-8 ${textClass}`}>ABOUT ME</h2>
       <div className="flex items-center">
-        <img
-          src="/profile-picture.jpeg"
-          alt="Profile"
-          className="w-32 h-32 rounded-full mr-8"
-        />
+
         <div className={`text-lg ${textClass}`}>
           <p>
             My initial interest in software development began in high school
