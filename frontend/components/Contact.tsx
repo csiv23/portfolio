@@ -4,7 +4,7 @@ import styles from "./Contact.module.css";
 import { ThemeContext } from "./ThemeContext"; // Import ThemeContext
 
 const Contact = () => {
-  const darkTheme = useContext(ThemeContext); 
+  const darkTheme = useContext(ThemeContext);
   const { textClass } = useThemeStyles();
   const [formData, setFormData] = useState({
     name: "",
@@ -66,7 +66,9 @@ const Contact = () => {
           placeholder="Name"
           value={formData.name}
           onChange={handleChange}
-          className={`${styles.formField} ${darkTheme ? styles.formFieldDark : styles.formFieldLight}`}
+          className={`${styles.formField} ${
+            darkTheme ? styles.formFieldDark : styles.formFieldLight
+          }`}
           required
         />
         <input
@@ -75,7 +77,9 @@ const Contact = () => {
           placeholder="Email"
           value={formData.email}
           onChange={handleChange}
-          className={`${styles.formField} ${darkTheme ? styles.formFieldDark : styles.formFieldLight}`}
+          className={`${styles.formField} ${
+            darkTheme ? styles.formFieldDark : styles.formFieldLight
+          }`}
           required
         />
         <textarea
@@ -83,10 +87,17 @@ const Contact = () => {
           placeholder="Message"
           value={formData.message}
           onChange={handleChange}
-          className={`${styles.formField} ${darkTheme ? styles.formFieldDark : styles.formFieldLight}`}
+          className={`${styles.formField} ${
+            darkTheme ? styles.formFieldDark : styles.formFieldLight
+          }`}
           required
         />
-        <button type="submit" className={styles.submitButton}>
+        <button
+          type="submit"
+          className={`${styles.submitButton} ${
+            darkTheme ? styles.submitButtonDark : styles.submitButtonLight
+          }`}
+        >
           Submit
         </button>
       </form>
