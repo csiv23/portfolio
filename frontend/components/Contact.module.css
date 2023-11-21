@@ -3,11 +3,16 @@
     flex-direction: column; /* Make children stack vertically */
     justify-content: center;
     align-items: center;
+    margin-bottom: 5vh;
   }
   
   .contactForm {
     width: 100%;
     max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .formField {
