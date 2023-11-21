@@ -53,7 +53,7 @@ const Projects: FC = () => {
     <div
       id="projects"
       style={{
-        paddingTop: "2vh",
+        paddingTop: "10vh",
         paddingBottom: "8vh",
         margin: "0 auto",
         display: "flex",
@@ -63,7 +63,7 @@ const Projects: FC = () => {
       }}
       className="text-center w-full"
     >
-      <h2 className={`text-4xl font-semibold mb-8 ${textClass}`}>Projects</h2>
+      <h2 className={`text-3xl font-semibold mb-12 ${textClass}`}>PROJECTS</h2>
       <div
         className="w-full"
         style={{

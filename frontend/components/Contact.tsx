@@ -21,7 +21,6 @@ const Contact = () => {
     });
   };
 
-  // Handles form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
@@ -55,7 +54,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className={styles.contactContainer}>
-      <h2 className={`text-3xl font-bold mb-4 ${textClass}`}>Contact</h2>
+      <h2 className={`text-3xl font-semibold mb-4 ${textClass}`}>CONTACT</h2>
       <p className={darkTheme ? styles.textDark : styles.textLight}>
         Have a question or want to work together?
       </p>

@@ -47,7 +47,7 @@ const Experience: FC = () => {
       }}
       className="text-center w-full"
     >
-      <h2 className={`text-4xl font-semibold mb-8 ${textClass}`}>Experience</h2>
+      <h2 className={`text-3xl font-semibold mb-8 ${textClass}`}>EXPERIENCE</h2>
       <div className="w-full">
         {jobs.map((job, index) => (
           <div
