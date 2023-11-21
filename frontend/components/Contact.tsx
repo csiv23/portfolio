@@ -9,7 +9,6 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const [submissionStatus, setSubmissionStatus] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -32,23 +31,23 @@ const Contact = () => {
         },
         body: JSON.stringify({
           ...formData,
-          apikey: "07197a62-f470-448c-bde6-e7a47f4b8a3b",
+          apikey: "07197a62-f470-448c-bde6-e7a47f4b8a3b", 
         }),
       });
 
       if (response.ok) {
-        setSubmissionStatus("Form submitted successfully");
+        alert("Thank you! Your message has been successfully sent.");
         setFormData({
           name: "",
           email: "",
           message: "",
         });
       } else {
-        setSubmissionStatus("Submission failed. Please try again.");
+        alert("Submission failed. Please try again.");
       }
     } catch (error) {
       console.error("Submission failed", error);
-      setSubmissionStatus("An error occurred. Please try again.");
+      alert("An error occurred. Please try again.");
     }
   };
 
@@ -87,7 +86,6 @@ const Contact = () => {
           Submit
         </button>
       </form>
-      {submissionStatus && <p>{submissionStatus}</p>}
     </div>
   );
 };
