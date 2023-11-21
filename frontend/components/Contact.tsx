@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import useThemeStyles from "../hooks/useThemeStyles";
 import styles from "./Contact.module.css";
+import { ThemeContext } from "./ThemeContext"; // Import ThemeContext
 
 const Contact = () => {
+  const darkTheme = useContext(ThemeContext); 
   const { textClass } = useThemeStyles();
   const [formData, setFormData] = useState({
     name: "",
@@ -31,7 +33,7 @@ const Contact = () => {
         },
         body: JSON.stringify({
           ...formData,
-          apikey: "07197a62-f470-448c-bde6-e7a47f4b8a3b", 
+          apikey: "07197a62-f470-448c-bde6-e7a47f4b8a3b",
         }),
       });
 
@@ -54,7 +56,9 @@ const Contact = () => {
   return (
     <div id="contact" className={styles.contactContainer}>
       <h2 className={`text-3xl font-bold mb-4 ${textClass}`}>Contact</h2>
-      <p>Have a question or want to work together?</p>
+      <p className={darkTheme ? styles.textDark : styles.textLight}>
+        Have a question or want to work together?
+      </p>
       <form className={styles.contactForm} onSubmit={handleSubmit}>
         <input
           type="text"
@@ -62,7 +66,7 @@ const Contact = () => {
           placeholder="Name"
           value={formData.name}
           onChange={handleChange}
-          className={styles.formField}
+          className={`${styles.formField} ${darkTheme ? styles.formFieldDark : styles.formFieldLight}`}
           required
         />
         <input
@@ -71,7 +75,7 @@ const Contact = () => {
           placeholder="Email"
           value={formData.email}
           onChange={handleChange}
-          className={styles.formField}
+          className={`${styles.formField} ${darkTheme ? styles.formFieldDark : styles.formFieldLight}`}
           required
         />
         <textarea
@@ -79,7 +83,7 @@ const Contact = () => {
           placeholder="Message"
           value={formData.message}
           onChange={handleChange}
-          className={styles.formField}
+          className={`${styles.formField} ${darkTheme ? styles.formFieldDark : styles.formFieldLight}`}
           required
         />
         <button type="submit" className={styles.submitButton}>
