@@ -1,5 +1,6 @@
 import React, { FC, RefObject, useContext } from "react";
 import { ThemeContext, ThemeUpdateContext } from "./ThemeContext";
+import DescriptionIcon from '@mui/icons-material/Description';
 import useThemeStyles from "../hooks/useThemeStyles";
 import styles from "./LandingPage.module.css";
 
@@ -70,9 +71,13 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
           }`}
         >
           View Resume <span className="arrow right"></span>
+          <DescriptionIcon 
+            className={`${styles.resumeIcon} ${
+              darkTheme ? styles.resumeIconDark : styles.resumeIconLight
+            }`} 
+          />
         </a>
 
-        {/* Social Links with hover effect */}
         <div className="mt-4 space-x-4">
           <a
             href="https://www.linkedin.com/in/cameron-sivo-68a721224/"
