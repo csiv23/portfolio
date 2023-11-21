@@ -1,6 +1,6 @@
 import React, { FC, RefObject, useContext } from "react";
 import { ThemeContext, ThemeUpdateContext } from "./ThemeContext";
-import DescriptionIcon from '@mui/icons-material/Description';
+import DescriptionIcon from "@mui/icons-material/Description";
 import useThemeStyles from "../hooks/useThemeStyles";
 import styles from "./LandingPage.module.css";
 
@@ -41,7 +41,11 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
           className={`text-4xl font-semibold mb-4 text-center intro-line ${textClass}`}
         >
           Hey, I'm{" "}
-          <span className={darkTheme ? styles.nameDark : styles.nameLight}>
+          <span
+            className={`${darkTheme ? styles.nameDark : styles.nameLight} ${
+              styles.nameHoverEffect
+            }`}
+          >
             Cameron
           </span>
           . 👋
@@ -71,10 +75,10 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
           }`}
         >
           View Resume <span className="arrow right"></span>
-          <DescriptionIcon 
+          <DescriptionIcon
             className={`${styles.resumeIcon} ${
               darkTheme ? styles.resumeIconDark : styles.resumeIconLight
-            }`} 
+            }`}
           />
         </a>
 
