@@ -1,6 +1,5 @@
 import React, { FC, useContext } from "react";
 import useThemeStyles from "..//hooks/useThemeStyles";
-import styles from "./Projects.module.css";
 import { ThemeContext } from "./ThemeContext";
 
 type Project = {
@@ -76,7 +75,7 @@ const Projects: FC = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className={`${styles.project} ${textClass}`}
+            className={`${project} ${textClass}`}
             style={{
               boxShadow: darkTheme
                 ? "rgba(0,0,0,0.16) 0px 10px 36px 0px,rgba(0,0,0,0.06) 0px 0px 0px 1px"
@@ -101,15 +100,16 @@ const Projects: FC = () => {
               src={project.imageSrc}
               alt={project.name}
               style={{
-                width: "100%",
                 borderRadius: "0.5rem",
                 marginBottom: "1rem",
                 objectFit: "cover",
+                width: "100%",
+                height: "200px",
               }}
             />
             <h3
               className="text-2xl font-semibold"
-              style={{ marginBottom: "1rem", height: "3rem" }}
+              style={{ height: "3rem" }}
             >
               {project.name}
             </h3>
