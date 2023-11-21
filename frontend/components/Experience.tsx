@@ -70,12 +70,14 @@ const Experience: FC = () => {
               <p className={`text-base ${textClass}`}>{job.description}</p>
               <div className="mt-2 flex space-x-2">
                 {job.technologies.map((tech, techIndex) => (
-                  <button
+                  <span
                     key={techIndex}
-                    className={`bg-blue-700 text-blue-300 rounded-full px-3 py-1 ${styles.techButton}`}
+                    className={`${styles.techLabel} ${
+                      darkTheme ? styles.techLabelDark : styles.techLabelLight
+                    }`}
                   >
                     {tech}
-                  </button>
+                  </span>
                 ))}
               </div>
             </div>
