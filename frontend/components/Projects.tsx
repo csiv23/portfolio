@@ -1,6 +1,7 @@
 import React, { FC, useContext } from "react";
 import useThemeStyles from "..//hooks/useThemeStyles";
 import { ThemeContext } from "./ThemeContext";
+import styles from "./projects.module.css"; // Import your CSS module here
 
 type Project = {
   name: string;
@@ -50,100 +51,22 @@ const Projects: FC = () => {
   ];
 
   return (
-    <div
-      id="projects"
-      style={{
-        paddingTop: "10vh",
-        paddingBottom: "8vh",
-        margin: "0 auto",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        maxWidth: "1100px",
-      }}
-      className="text-center w-full"
-    >
+    <div className={`text-center w-full ${styles.projectsContainer}`}>
       <h2 className={`text-3xl font-semibold mb-12 ${textClass}`}>PROJECTS</h2>
-      <div
-        className="w-full"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
-          gridGap: "2rem",
-        }}
-      >
+      <div className={styles.projectsGrid}>
         {projects.map((project, index) => (
-          <div
-            key={index}
-            className={`${project} ${textClass}`}
-            style={{
-              boxShadow: darkTheme
-                ? "rgba(0,0,0,0.16) 0px 10px 36px 0px,rgba(0,0,0,0.06) 0px 0px 0px 1px"
-                : "hsla(240,5%,41%,0.2) 0px 7px 29px 0px",
-              maxWidth: "400px",
-              width: "100%",
-              margin: "0 auto",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              alignItems: "center",
-              transition: "transform 0.3s ease-in-out",
-            }}
-            onMouseOver={(e) =>
-              (e.currentTarget.style.transform = "translateY(-10px)")
-            }
-            onMouseOut={(e) =>
-              (e.currentTarget.style.transform = "translateY(0)")
-            }
-          >
-            <img
-              src={project.imageSrc}
-              alt={project.name}
-              style={{
-                borderRadius: "0.5rem",
-                marginBottom: "1rem",
-                objectFit: "cover",
-                width: "100%",
-                height: "200px",
-              }}
-            />
-            <h3
-              className="text-2xl font-semibold"
-              style={{ height: "3rem" }}
-            >
-              {project.name}
-            </h3>
-            <p
-              style={{
-                marginBottom: "1rem",
-                height: "6rem",
-                overflow: "hidden",
-              }}
-            >
-              {project.description}
-            </p>
-            <div
-              className="flex justify-center space-x-2"
-              style={{ marginBottom: "1rem" }}
-            >
+          <div key={index} className={`${styles.projectCard} ${darkTheme ? styles.projectCardDark : ""}`}>
+            <img src={project.imageSrc} alt={project.name} className={styles.projectImage} />
+            <h3 className={`text-2xl font-semibold ${textClass} ${styles.projectName}`}>{project.name}</h3>
+            <p className={`${textClass} ${styles.projectDescription}`}>{project.description}</p>
+            <div className={`flex justify-center space-x-2 ${textClass}`}>
               {project.technologies.map((tech, techIndex) => (
-                <span
-                  key={techIndex}
-                  style={{ textTransform: "uppercase", fontWeight: "bold" }}
-                >
-                  {tech}
-                </span>
+                <span key={techIndex} className={`${textClass} ${styles.technologyTag}`}>{tech}</span>
               ))}
             </div>
             {project.link && (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="fa fa-github fa-2x"
-                style={{ marginBottom: "1rem" }}
-              >
-                {/* Icon content (if any) */}
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className={`fa fa-github fa-2x ${textClass} ${styles.githubLink}`}>
+                {/* Icon content */}
               </a>
             )}
           </div>
