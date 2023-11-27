@@ -41,29 +41,13 @@ const Skills: FC = () => {
   ];
 
   return (
-    <div
-      id="skills"
-      style={{
-        paddingTop: "2vh",
-        paddingBottom: "2vh",
-        margin: "0 auto",
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        alignItems: "center",
-        maxWidth: "1100px",
-      }}
-      className="text-center p-6"
-    >
+    <div id="skills" className={`text-center p-6 ${styles.skillsContainer}`}>
       <h2 className={`text-3xl font-semibold mb-8 ${textClass}`}>SKILLS</h2>
       <div className="flex flex-wrap gap-4 justify-center">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className={`m-2 p-2 border rounded ${textClass} flex items-center justify-center ${
-              styles.skillBox
-            } ${darkTheme ? styles.skillBoxDark : styles.skillBoxLight}`}
-            style={{}}
+            className={`m-2 p-2 border rounded ${textClass} flex items-center justify-center ${styles.skillBox} ${darkTheme ? styles.skillBoxDark : styles.skillBoxLight}`}
           >
             <div className="text-base">{skill}</div>
           </div>
