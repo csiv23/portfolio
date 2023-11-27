@@ -117,3 +117,53 @@
 .nameHoverEffect:hover {
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5); /* very soft shadow */
 }
+
+
+.landingPageContainer {
+  height: 100vh;
+  max-width: 700px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.introText {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.aboutDescription {
+  padding-top: 5px;
+}
+
+.socialIcon {
+  transition: transform 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .justifyCenter {
+    padding-top:10vh;
+    justify-content: flex-start;
+  }
+
+  .introText {
+    font-size: 46px; /* Smaller font size for mobile */
+  }
+
+  .softwareEngineer {
+    display: inline-block;
+    line-height: 1.5;
+  }
+
+  .aboutDescription {
+    padding-bottom: 50px;
+  }
+
+  
+} 

@@ -18,27 +18,11 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
 
   return (
     <main
-      id="top"
-      style={{
-        height: "100vh",
-        maxWidth: "700px",
-        width: "90%",
-        margin: "0 auto",
-      }}
-      className="flex flex-col items-center justify-center w-full"
+      className={`flex flex-col items-center justify-center w-full ${styles.landingPageContainer} ${styles.justifyCenter}`}
     >
-      <div
-        id="about"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <div className={styles.aboutContainer}>
         <div
-          style={{ fontSize: "48px", fontWeight: "bold" }}
-          className={`text-4xl font-semibold mb-4 text-center intro-line ${textClass}`}
+          className={`text-4xl font-semibold mb-4 text-center intro-line ${textClass} ${styles.introText}`}
         >
           Hey, I'm{" "}
           <span
@@ -51,12 +35,14 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
           . 👋
         </div>
         <div
-          style={{ fontSize: "48px", fontWeight: "bold" }}
-          className={`text-4xl font-semibold mb-4 text-center intro-line ${textClass}`}
+          className={`text-4xl font-semibold mb-4 text-center intro-line ${textClass} ${styles.introText}`}
         >
-          <div>I'm a Software Engineer.</div>
+          <div>
+            I'm a Software{" "}
+            <span className={styles.softwareEngineer}>Engineer.</span>
+          </div>
         </div>
-        <div id="about-description" style={{ paddingTop: "5px" }}>
+        <div className={styles.aboutDescription}>
           <p className={`text-lg ${textClass}`}>
             I'm a Computer Science graduate from Northeastern University with a
             focus on full-stack development. Based in Boston, I'm deeply
