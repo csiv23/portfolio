@@ -35,7 +35,9 @@ const Experience: FC = () => {
   ];
 
   return (
-    <div className={`text-center ${styles.experienceContainer}`}>
+    <div 
+    id = "experience"
+    className={`text-center ${styles.experienceContainer}`}>
       <h2 className={`text-3xl font-semibold mb-8 ${textClass} ${styles.experienceHeader}`}>EXPERIENCE</h2>
       <div className="w-full">
         {jobs.map((job, index) => (
