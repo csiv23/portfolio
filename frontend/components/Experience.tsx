@@ -35,47 +35,23 @@ const Experience: FC = () => {
   ];
 
   return (
-    <div
-      id="experience"
-      style={{
-        paddingTop: "2vh",
-        margin: "0 auto",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        maxWidth: "1100px",
-      }}
-      className="text-center w-full"
-    >
-      <h2 className={`text-3xl font-semibold mb-8 ${textClass}`}>EXPERIENCE</h2>
+    <div className={`text-center ${styles.experienceContainer}`}>
+      <h2 className={`text-3xl font-semibold mb-8 ${textClass} ${styles.experienceHeader}`}>EXPERIENCE</h2>
       <div className="w-full">
         {jobs.map((job, index) => (
-          <div
-            key={index}
-            className={`flex ${styles.jobBox} ${
-              darkTheme ? styles.jobBoxDark : styles.jobBoxLight
-            }`}
-          >
-            <div
-              className={`w-1/4 text-left text-lg ${textClass}`}
-              style={{ paddingLeft: "10px" }}
-            >
-              <p>{job.duration}</p>
+          <div key={index} className={`flex ${styles.jobBox} ${darkTheme ? styles.jobBoxDark : styles.jobBoxLight}`}>
+            <div className={`w-1/4 ${textClass} ${styles.durationText}`}>
+              <p className={styles.jobDuration}>{job.duration}</p>
             </div>
             <div className="flex-1 text-left pl-4">
-              <h3 className={`text-2xl font-semibold ${textClass}`}>
+              <h3 className={`text-2xl font-semibold ${textClass} ${styles.jobRole}`}>
                 {job.role}
               </h3>
-              <h4 className={`text-xl ${textClass}`}>{job.company}</h4>
-              <p className={`text-base ${textClass}`}>{job.description}</p>
+              <h4 className={`text-xl ${textClass} ${styles.jobCompany}`}>{job.company}</h4>
+              <p className={`text-base ${textClass} ${styles.jobDescription}`}>{job.description}</p>
               <div className="mt-2 flex space-x-2">
                 {job.technologies.map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    className={`${styles.techLabel} ${
-                      darkTheme ? styles.techLabelDark : styles.techLabelLight
-                    }`}
-                  >
+                  <span key={techIndex} className={`${styles.techLabel} ${darkTheme ? styles.techLabelDark : styles.techLabelLight}`}>
                     {tech}
                   </span>
                 ))}

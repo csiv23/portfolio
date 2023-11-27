@@ -1,3 +1,20 @@
+.experienceContainer {
+  padding-top: 2vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1100px;
+  width: 95%;
+}
+
+.durationText {
+  padding-left: 10px;
+  text-align: left;
+  font-size: 1rem; 
+}
+
+
 .jobBox {
   margin-top: 1rem;
   max-width: 100%;
@@ -42,3 +59,24 @@
   border: 1px solid #222; 
 }
 
+@media screen and (max-width: 768px) {
+  .jobRole {
+    font-size: 1.5rem;
+  }
+
+  .jobCompany {
+    font-size: 0.9rem; 
+  }
+
+  .jobDuration {
+    font-size: 0.85rem; 
+  }
+
+  .jobDescription {
+    font-size: 0.8rem; 
+  }
+
+  .techLabel {
+    font-size: 0.75rem; 
+  }
+}
