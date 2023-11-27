@@ -1,7 +1,7 @@
 import React, { FC, useContext } from "react";
 import useThemeStyles from "..//hooks/useThemeStyles";
 import { ThemeContext } from "./ThemeContext";
-import styles from "./projects.module.css"; 
+import styles from "./Projects.module.css"; 
 
 type Project = {
   name: string;
