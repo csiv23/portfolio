@@ -1,0 +1,40 @@
+.skillBox {
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.15);
+  min-width: 100px;
+}
+
+.skillBox:hover {
+  transform: translateY(-5px);
+}
+
+.skillBoxDark {
+  background-color: #2a2f4c;
+  border: none;
+}
+
+.skillBoxLight {
+  background-color: #fff;
+  border: 0px;
+}
+
+.skillsContainer {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .skillBox {
+    min-width: 80px; 
+    padding: 10px;
+    font-size: 14px; 
+  }
+
+}

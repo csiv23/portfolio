@@ -1,0 +1,82 @@
+.experienceContainer {
+  padding-top: 2vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1100px;
+  width: 95%;
+}
+
+.durationText {
+  padding-left: 10px;
+  text-align: left;
+  font-size: 1rem; 
+}
+
+
+.jobBox {
+  margin-top: 1rem;
+  max-width: 100%;
+  transition: all 0.3s ease;
+}
+
+.jobBoxLight:hover {
+  background-color: rgba(200, 200, 200, 0.2); 
+  transform: scale(1.02);
+}
+
+.jobBoxDark:hover {
+  background-color: rgb(40, 40, 40);
+  transform: scale(1.02);
+}
+
+.techButton {
+  transition: all 0.3s ease;
+}
+
+.techButton:hover {
+  filter: brightness(125%);
+}
+
+.techLabel {
+  margin: 0.25rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+.techLabelLight {
+  background-color: #f5f5f5; 
+  color: #333;
+  border: 1px solid #ddd; 
+}
+
+.techLabelDark {
+  background-color: #333; 
+  color: #cdcdff; 
+  border: 1px solid #222; 
+}
+
+@media screen and (max-width: 768px) {
+  .jobRole {
+    font-size: 1.5rem;
+  }
+
+  .jobCompany {
+    font-size: 0.9rem; 
+  }
+
+  .jobDuration {
+    font-size: 0.85rem; 
+  }
+
+  .jobDescription {
+    font-size: 0.8rem; 
+  }
+
+  .techLabel {
+    font-size: 0.75rem; 
+  }
+}

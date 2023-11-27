@@ -1,0 +1,169 @@
+
+.customButton {
+  padding: 8px 16px;
+  margin: 0 0 20px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.customButtonDark {
+  background-color: #333;
+  color: #fff;
+}
+
+.customButtonLight {
+  background-color: #eee;
+  color: #333;
+}
+
+.customButtonDark:hover {
+  background-color: #444; /* Darker shade for hover state */
+}
+
+.customButtonLight:hover {
+  background-color: #ddd; /* Lighter shade for hover state */
+}
+
+.intro-line {
+  margin-bottom: 1em;  /* Adjust as needed */
+}
+
+.customButton .arrow {
+  transition: transform 0.3s ease-in-out;
+}
+
+.customButton:hover .arrow.right {
+  transform: rotate(90deg);
+}
+
+.arrow {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  transform: rotate(45deg);
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+
+.paragraph-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.paragraph-width {
+  max-width: 700px;
+  width: 100%;
+}
+
+
+.textLight {
+  color: #444;
+}
+
+.textDark {
+  color: #cdcdff;
+}
+
+.nameLight {
+  color: #2978b5;
+}
+
+.nameDark {
+  color: #90a0d9;
+}
+
+.socialDark {
+  color: #cdcdff;
+}
+
+.socialLight {
+  color: #444;
+}
+
+
+
+.about-description {
+  padding-top: 5px;
+}
+
+.resumeIcon {
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+
+.resumeIconLight {
+  color: #444;
+}
+
+.resumeIconDark {
+  color: #cdcdff;
+}
+
+.nameHoverEffect {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+
+.nameHoverEffect:hover {
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5); /* very soft shadow */
+}
+
+
+.landingPageContainer {
+  height: 100vh;
+  max-width: 700px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.introText {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.aboutDescription {
+  padding-top: 5px;
+}
+
+.socialIcon {
+  transition: transform 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .justifyCenter {
+    padding-top:10vh;
+    justify-content: flex-start;
+  }
+
+  .introText {
+    font-size: 46px; /* Smaller font size for mobile */
+  }
+
+  .softwareEngineer {
+    display: inline-block;
+    line-height: 1.5;
+  }
+
+  .aboutDescription {
+    padding-bottom: 50px;
+  }
+
+  
+} 
