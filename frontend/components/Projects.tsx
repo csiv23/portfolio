@@ -1,7 +1,7 @@
 import React, { FC, useContext } from "react";
 import useThemeStyles from "..//hooks/useThemeStyles";
 import { ThemeContext } from "./ThemeContext";
-import styles from "./projects.module.css"; // Import your CSS module here
+import styles from "./projects.module.css"; 
 
 type Project = {
   name: string;
@@ -36,7 +36,7 @@ const Projects: FC = () => {
       name: "MangaMatch",
       description:
         "A book recommendation platform utilizing a one-hot encoding and cosine similarity algorithm for tailored suggestions across various genres and themes.",
-      imageSrc: "/images/zengen.png", // Placeholder image source
+      imageSrc: "/images/zengen.png", 
       technologies: ["Express.js", "Node.js", "MongoDB", "React.js"],
       link: "https://github.com/csiv23/MangaMatch",
     },
@@ -51,7 +51,9 @@ const Projects: FC = () => {
   ];
 
   return (
-    <div className={`text-center w-full ${styles.projectsContainer}`}>
+    <div 
+    id = "projects"
+    className={`text-center w-full ${styles.projectsContainer}`}>
       <h2 className={`text-3xl font-semibold mb-12 ${textClass}`}>PROJECTS</h2>
       <div className={styles.projectsGrid}>
         {projects.map((project, index) => (
