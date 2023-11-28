@@ -46,12 +46,25 @@
   margin-bottom: 1rem;
   height: 6rem;
   overflow: hidden;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 .technologyTag {
   text-transform: uppercase;
   font-weight: bold;
 }
+
+.technologyTag:first-child {
+  padding-left: 10px; /* Add padding to the left of the first tag */
+}
+
+.technologyTag:last-child {
+  padding-right: 10px; /* Add padding to the right of the last tag */
+}
+
+
+
 
 .githubLink {
   margin-bottom: 1rem;
