@@ -11,6 +11,7 @@ const Home: FC = () => {
         <meta name="description" content="Cameron Sivo Portfolio" />
         <meta name="keywords" content="Cameron, Sivo, Portfolio" />
         <meta name="author" content="Cameron Sivo" />
+        <link rel="icon" href="/images/portfolio-logo.png" type="image/png" />
         <title>Cameron Sivo</title>
       </Head>
       <Main />
