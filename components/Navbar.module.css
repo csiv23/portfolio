@@ -202,3 +202,7 @@
 }
 
 
+/* target Cameron Sivo link and make it bold */
+.navLinks a:nth-child(1) {
+  font-weight: bold;
+}
