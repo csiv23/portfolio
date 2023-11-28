@@ -31,7 +31,7 @@ const Navbar: FC = () => {
         <MenuIcon /> 
       </button>
 
-      <div className={`${styles.navLinks} ${navOpen ? styles.navOpen : ''}`}>
+      <div className={`${styles.navLinks} ${navOpen ? `${styles.navOpen} ${darkTheme ? styles.navOpenDark : styles.navOpenLight}` : ''}`}>
         <a href="#top" onClick={scrollToSection('top', -100)}>Cameron Sivo</a>
         <a href="#about" onClick={scrollToSection('about', -100)}>About Me</a>
         <a href="#skills" onClick={scrollToSection('skills', -55)}>Skills</a>
