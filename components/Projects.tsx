@@ -20,8 +20,8 @@ const Projects: FC = () => {
       name: "Portfolio Website",
       description:
         "My portfolio website built using Next.js. This portfolio serves as a comprehensive showcase of my skills in web development. It features a dynamic UI, responsive design, and is highly optimized for performance.",
-      imageSrc: "/images/zengen.png",
-      technologies: ["Next.js", "Tailwind"],
+      imageSrc: "/images/portfolio.png",
+      technologies: ["Next.js", "TypeScript", "Tailwind"],
       link: "https://github.com/csiv23/portfolio",
     },
     {
