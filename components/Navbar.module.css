@@ -11,15 +11,6 @@
     z-index: 10;
   }
 
-  .nameLight {
-    color: #2978b5;
-    font-weight: bold; /* Make the name bolder */
-  }
-  
-  .nameDark {
-    color: #90a0d9;
-    font-weight: bold; /* Make the name bolder */
-  }
   
   .navLinks {
     display: none;
@@ -48,10 +39,10 @@
     color: white;
     font-size: 2rem;
     padding: 1rem;
-    text-align: center; /* Center text inside the anchor tag */
+    text-align: center; 
     transition: color 0.3s ease;
     z-index: 30;
-    margin: 0; /* Remove margin */
+    margin: 0; 
 }
   
   .themeToggleButton {
@@ -110,8 +101,8 @@
     cursor: pointer;
     position: absolute;
     top: 1rem;
-    left: 1rem; /* Moved to the top left */
-    z-index: 30; /* Above the overlay */
+    left: 1rem; 
+    z-index: 30; 
   }
 
   .nameInNavbar {
