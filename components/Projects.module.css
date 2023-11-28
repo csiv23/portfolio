@@ -53,6 +53,8 @@
 .technologyTag {
   text-transform: uppercase;
   font-weight: bold;
+  font-size: .9rem;
+  padding-bottom: 10px;
 }
 
 .technologyTag:first-child {
