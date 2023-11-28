@@ -34,22 +34,6 @@ html::-webkit-scrollbar {
 body, html {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  overflow-x: hidden;
 }
 
-/* Specific styles for iPhones */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px)
-  and (-webkit-min-device-pixel-ratio: 2),
-  only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 896px)
-  and (-webkit-min-device-pixel-ratio: 2),
-  only screen 
-  and (min-device-width: 360px) 
-  and (max-device-width: 780px)
-  and (-webkit-min-device-pixel-ratio: 3) {
-    body {
-      overflow-x: hidden; /* Prevent horizontal scrolling on iPhones */
-    }
-}
