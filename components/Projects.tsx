@@ -19,9 +19,9 @@ const Projects: FC = () => {
     {
       name: "Portfolio Website",
       description:
-        "My portfolio website built using Next.js. This portfolio serves as a comprehensive showcase of my skills in web development. It features a dynamic UI, responsive design, and is highly optimized for performance.",
+        "My portfolio website built using Next.js. This portfolio serves as a comprehensive showcase of my skills in web development. It features a dynamic UI and responsive design.",
       imageSrc: "/images/portfolio.png",
-      technologies: ["Next.js", "TypeScript", "Tailwind"],
+      technologies: ["Next.js", "TypeScript", "React.js", "Tailwind"],
       link: "https://github.com/csiv23/portfolio",
     },
     {
@@ -29,7 +29,7 @@ const Projects: FC = () => {
       description:
         "A personalized meditation app leveraging Text-to-Speech for customized guidance. Built with React and Flask, it features dynamic ChatGPT content generation and cross-platform compatibility.",
       imageSrc: "/images/zengen.png",
-      technologies: ["React", "Create React App", "Flask"],
+      technologies: ["React.js", "Flask", "Bootstrap"],
       link: "https://github.com/csiv23/ZenGen",
     },
     {
@@ -44,7 +44,7 @@ const Projects: FC = () => {
       name: "Persistent Badge Database",
       description:
         "Enhanced an open-source virtual meeting space with a persistent database for user profiles and a badge system to showcase player achievements.",
-      imageSrc: "/images/coveytown.png", // Placeholder image source
+      imageSrc: "/images/coveytown.png", 
       technologies: ["Typescript", "React.js", "PostgreSQL", "Postman"],
       link: "https://github.com/neu-cs4530/spring-23-team-513",
     },
