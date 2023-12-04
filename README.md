@@ -23,11 +23,3 @@ Welcome to my portfolio website! This project is not just a representation of my
 
 Feel free to explore the site and get in touch if you have any questions or proposals for collaboration.
 
----
-
-Thanks for visiting!
-
-Cameron
-
----
-
