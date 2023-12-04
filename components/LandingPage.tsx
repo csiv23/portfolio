@@ -44,12 +44,12 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
         </div>
         <div className={styles.aboutDescription}>
           <p className={`text-lg ${textClass}`}>
-            I'm a Computer Science graduate from Northeastern University with a
-            focus on full-stack development. Based in Boston, I'm deeply
-            committed to the craft of coding, from the logic of back-end to the
-            finesse of front-end design. My driving force is a strong work ethic
-            and the relentless pursuit of improvement. Let's build something
-            exceptional together.
+            I'm a recent Computer Science graduate from Northeastern University.
+            Currently based in Boston, I approach coding not just as a job, but
+            as a journey of constant learning and improvement. I'm all about
+            rolling up my sleeves and diving into projects that challenge me to
+            think outside the box. Feel free to check out my portfolio and see
+            the journey I've gone through!
           </p>
         </div>
         <a
