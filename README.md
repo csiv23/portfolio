@@ -27,7 +27,7 @@ Feel free to explore the site and get in touch if you have any questions or prop
 
 Thanks for visiting!
 
-- Cameron
+Cameron
 
 ---
 
