@@ -36,7 +36,7 @@ const Projects: FC = () => {
       name: "MangaMatch",
       description:
         "A book recommendation platform utilizing a one-hot encoding and cosine similarity algorithm for tailored suggestions across various genres and themes.",
-      imageSrc: "/images/zengen.png", 
+      imageSrc: "/images/mangamatch.png", 
       technologies: ["Express.js", "Node.js", "MongoDB", "React.js"],
       link: "https://github.com/csiv23/MangaMatch",
     },
