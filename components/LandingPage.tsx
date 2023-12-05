@@ -53,7 +53,7 @@ const LandingPage: FC<LandingPageProps> = ({ aboutRef }) => {
           </p>
         </div>
         <a
-          href="https://drive.google.com/file/d/1WC-jOjZC0i59nLiXpldieFAygSk2SOqZ/view?usp=sharing"
+          href=""
           target="_blank"
           rel="noopener noreferrer"
           className={`${styles.customButton} ${
